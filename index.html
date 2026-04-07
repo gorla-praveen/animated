@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animated Agency Website</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: #111827;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(to right, #4f46e5, #22c55e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      animation: zoomIn 1s ease;
+    }
+
+    .hero button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.1);
+      background: black;
+      color: white;
+    }
+
+    /* Sections */
+    .section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Cards */
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      animation: slideUp 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Portfolio */
+    .portfolio a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #4f46e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .portfolio a:hover {
+      background: #22c55e;
+    }
+
+    /* Contact */
+    form input, form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background: #22c55e;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity:0;}
+      to {opacity:1;}
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h2>My Agency</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Welcome to My Agency</h1>
+  <p>We build simple and modern websites</p>
+  <button>Get Started</button>
+</section>
+
+<!-- Services -->
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Web Design</div>
+    <div class="card">Development</div>
+    <div class="card">SEO</div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section">
+  <h2>About Us</h2>
+  <p>We are a creative team building modern websites.</p>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio" class="section portfolio">
+  <h2>My Projects</h2>
+  <a href="#">Project 1</a>
+  <a href="#">Project 2</a>
+  <a href="#">Project 3</a>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Name"><br>
+    <input type="email" placeholder="Email"><br>
+    <textarea placeholder="Message"></textarea><br>
+    <button>Send</button>
+  </form>
+</section>
+
+</body>
+</html>
